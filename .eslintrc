@@ -1,0 +1,48 @@
+{
+  "extends": [
+    "airbnb",
+    "plugin:react/recommended",
+    "plugin:prettier/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier",
+    "prettier/@typescript-eslint"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2019,
+    "sourceType": "module"
+  },
+  "plugins": ["@typescript-eslint", "react-hooks"],
+  "rules": {
+    // add project specific rules and name them on README.md file
+    // "object-curly-newline": ["never"],
+    // 0: off, 1: warn, 2: error
+    "react/require-default-props": "off",
+    "no-console": "warn",
+    "@typescript-eslint/no-empty-interface": "warn",
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "react/jsx-one-expression-per-line": "off",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "import/prefer-default-export": "off",
+    "react/jsx-filename-extension": ["error", { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "naver",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+    ]
+  },
+  "settings": {
+    "import/resolver": {
+      "typescript": {} // this loads <rootdir>/tsconfig.json to eslint
+    }
+  }
+}
